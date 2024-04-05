@@ -34,7 +34,7 @@
 // Enter x4, y4 : 0 2
 // Area of Square : 4.0
 // ------------------
-//Enter your choice: 5
+//Enterjfftyukyutkyuk7fk your choice: 5         
 
 import java.util.Scanner;
 
