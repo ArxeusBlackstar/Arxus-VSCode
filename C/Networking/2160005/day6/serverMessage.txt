@@ -1,0 +1,9 @@
+abc
+abc1
+a.out
+
+ Number of files: 3abc
+abc1
+a.out
+
+ Number of files: 3
