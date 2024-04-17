@@ -42,16 +42,17 @@ public class Quad {
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("\tMENU\n------------------\n1. Trapezoid\n2. Parallelogram\n3. Rectangle\n4. Square\n5. Exit");
+		System.out.println(
+				"\tMENU\n------------------\n1. Trapezoid\n2. Parallelogram\n3. Rectangle\n4. Square\n5. Exit");
 
-		while (true)	{
+		while (true) {
 			System.out.print("------------------\nEnter your choice: ");
 			int n = sc.nextInt();
 			double[] x = new double[5];
 			double[] y = new double[5];
 
 			for (int i = 1; i <= 4; i++) {
-				System.out.print("Enter x"+i+", y"+i+" : ");
+				System.out.print("Enter x" + i + ", y" + i + " : ");
 				x[i] = sc.nextDouble();
 				y[i] = sc.nextDouble();
 			}
@@ -116,12 +117,12 @@ class Trapezoid extends Quadrilateral {
 		super(x, y);
 	}
 
-	@Override double area()	{
-	return 0.5 * Math.abs(
-		(x[1] * y[2] + x[2] * y[3] + x[3] * y[4] + x[4] * y[1]) -
-		(x[2] * y[1] + x[3] * y[2] + x[4] * y[3] + x[1] * y[4])
-	);
-}
+	@Override
+	double area() {
+		return 0.5 * Math.abs(
+				(x[1] * y[2] + x[2] * y[3] + x[3] * y[4] + x[4] * y[1]) -
+						(x[2] * y[1] + x[3] * y[2] + x[4] * y[3] + x[1] * y[4]));
+	}
 
 }
 
@@ -130,7 +131,8 @@ class Parallelogram extends Trapezoid {
 		super(x, y);
 	}
 
-	@Override double area() {
+	@Override
+	double area() {
 		return calcDist(x[1], y[1], x[2], y[2]) * perpDist(x[4], y[4], x[1], y[1], x[2], y[2]);
 	}
 }
@@ -140,7 +142,8 @@ class Rectangle extends Parallelogram {
 		super(x, y);
 	}
 
-	@Override double area() {
+	@Override
+	double area() {
 		return calcDist(x[1], y[1], x[2], y[2]) * calcDist(x[2], y[2], x[3], y[3]);
 	}
 }
@@ -150,7 +153,8 @@ class Square extends Rectangle {
 		super(x, y);
 	}
 
-	@Override double area() {
+	@Override
+	double area() {
 		return Math.pow(calcDist(x[1], y[1], x[2], y[2]), 2);
 	}
 }

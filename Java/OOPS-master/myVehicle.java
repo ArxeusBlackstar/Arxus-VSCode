@@ -17,7 +17,6 @@
 // Owner: Deputy Commissionor of Police
 // Car Details: Manufacturer - Tata Safari
 
-
 // Enter vehicle details:
 // Registration Number: WB11 C 5531
 // Speed (km/h): 60
@@ -50,11 +49,10 @@ class Vehicle {
 	protected String ownerName;
 
 	public Vehicle(
-		String regnNumber,
-		double speed,
-		String color,
-		String ownerName
-	) {
+			String regnNumber,
+			double speed,
+			String color,
+			String ownerName) {
 		this.regnNumber = regnNumber;
 
 		this.speed = speed;
@@ -82,12 +80,11 @@ class Bus extends Vehicle {
 	private String routeNumber;
 
 	public Bus(
-		String regnNumber,
-		double speed,
-		String color,
-		String ownerName,
-		String routeNumber
-	) {
+			String regnNumber,
+			double speed,
+			String color,
+			String ownerName,
+			String routeNumber) {
 		super(regnNumber, speed, color, ownerName);
 		this.routeNumber = routeNumber;
 	}
@@ -105,12 +102,11 @@ class Car extends Vehicle {
 	private String manufacturerName;
 
 	public Car(
-		String regnNumber,
-		double speed,
-		String color,
-		String ownerName,
-		String manufacturerName
-	) {
+			String regnNumber,
+			double speed,
+			String color,
+			String ownerName,
+			String manufacturerName) {
 		super(regnNumber, speed, color, ownerName);
 		this.manufacturerName = manufacturerName;
 	}
@@ -149,8 +145,7 @@ class myVehicle {
 		String ownerName = scanner.nextLine();
 
 		System.out.print(
-			"\tVEHICLE TYPE\n------------------\n1. Bus\n2. Car\n------------------\nEnter your choice: "
-		);
+				"\tVEHICLE TYPE\n------------------\n1. Bus\n2. Car\n------------------\nEnter your choice: ");
 
 		int choice = scanner.nextInt();
 
@@ -175,12 +170,11 @@ class myVehicle {
 				String manufacturerName = scanner.nextLine();
 
 				Car car = new Car(
-					regnNumber,
-					speed,
-					color,
-					ownerName,
-					manufacturerName
-				);
+						regnNumber,
+						speed,
+						color,
+						ownerName,
+						manufacturerName);
 
 				car.showData();
 

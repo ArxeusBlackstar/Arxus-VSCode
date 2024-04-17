@@ -10,14 +10,14 @@
 // -1
 // Value of x must be positive.
 
-import io.*;
+import java.io.*;
 import java.util.*;
 
 class Factorial {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int x = i.in("Enter a number: ");
+		int x = sc.nextInt();
 		long[] fact = new long[21];
 		fact[0] = 1;
 		int last = 0;
@@ -30,8 +30,8 @@ class Factorial {
 				fact[last + 1] = fact[last] * (last + 1);
 				last++;
 			}
-			o.str("Factorial: ");
-			o.lng(fact[x]);
+			System.out.println("Factorial: ");
+			System.out.println(fact[x]);
 		}
 		catch (IllegalArgumentException e) 
 		{
